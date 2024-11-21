@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'roboto', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/*Estilização Cabeçalho*/
+#cabecalho {
+    background-color: #181818;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.cabecalho_menu {
+    width: 100%;
+    max-width: 1255px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.menu_list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu_list a {
+    text-decoration: none;
+    font-size: 1.20rem;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.menu_list li:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+/*Fim estilização do cabeçalho*/
+
+
+/*Estilização main*/
+#inicio {
+    width: 100%;
+    height: calc(100vh - 80px); /*Para diminuir a diferença dos 80px so header*/
+    display: flex;
+    justify-content: center;
+    background-image: url("./images/programador.png");
+}
+
+.inicio_principal {
+    width: 100%;
+    max-width: 1255px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.principal_titulo h1 {
+    color: #fff;
+    font-size: 3.37rem;
+}
+
+.principal_titulo p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #1e96fc;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.principal_titulo a {
+    text-decoration: none;
+    color: #181818;
+}
+
+.principal_titulo button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 14px;
+    font-size: 1.12rem;
+    font-weight: bold;
+    transition: 0.9s;
+}
+
+.principal_titulo button:hover {
+    transform: scale(1.1);
+}
+/*Fim estilização do main*/
+
+
+/*Inicio estilização do sobre*/
+#sobre {
+    width: 100%;
+    background-color: #fff;
+}
+
+.sobre_container {
+    width: 100%;
+    max-width: 1255px;
+    display: flex;
+    gap: 100px;
+    margin: 80px auto;
+    padding: 30px;
+}
+
+.sobre_container_esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre_container_esquerdo h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.sobre_container_esquerdo p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.sobre_container_direito img {
+    width: 100%;
+    border-radius: 8px;
+}
+/*Fim estilização sobre*/
+
+
+/*Inicio estilização projetos*/
+#projetos {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5%;
+}
+
+.projetos_container {
+    width: 100%;
+    max-width: 1255px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.projetos_titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.projetos_titulos h2 {
+    font-size: 2rem;;
+}
+
+.projetos_titulos p {
+    font-size: 1.22rem;
+    font-style: italic;
+    color: #181818;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.projetos_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.projetos_images img {
+    width: 30%;
+    border-radius: 8px;
+}
+
+.projetos_link {
+    text-decoration: none;
+}
+
+.projetos_link_button {
+    cursor: pointer;
+    background-color: #181818;
+    color: #eee;
+    border: none;
+    border-radius: 5px;
+    padding: 14px;
+    font-size: 1.12rem;
+    font-weight: bold;   
+}
+/*Fim estilização dos projetos*/
+
+/*Início estilização rodapé*/
+#rodape{
+    width: 100%;
+    background-color: #181818;
+    padding: 2%;
+}
+
+.rodape_conteiner {
+    width: 100%;
+    max-width: 1255px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.rodape_conteiner span {
+    color: #fff;
+}
+/*Fim Estilização Rodapé*/
+
+/*Responsividade*/
+@media (max-width: 850px) {
+    .sobre_container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    #cabecalho {
+        position: initial;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+
+    .menu_list {
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .menu_list li {
+        background-color: #eee;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .menu_list li a {
+        color: #181818;
+    }
+
+    .inicio_principal {
+        justify-content: center;
+    }
+
+    .principal_titulo h1 {
+        font-size: 2.5rem;
+    }
+    .principal_titulo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rodape_conteiner {
+        align-items: center;
+    }
+
+    .rodape_conteiner span {
+        text-align: center;
+    }
+}
